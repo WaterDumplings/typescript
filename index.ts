@@ -50,3 +50,19 @@ let 학교 : {
 학교.score[4] = false;
 학교.friend = ['Lee', 학교.teacher]
 
+// ------ 12월 1일 금요일 --------
+
+function test(x :number) :number {
+  return x * 2
+}
+
+test(2)
+// test('하이')  -> 파라미터, 리턴값 모두 number 이기 때문에 오류남
+
+function test1(x :number | string) :void {
+  if (x가 number면 아래를 계산해라) {
+    console.log(x + 3)
+  }
+}
+
+
