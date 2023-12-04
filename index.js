@@ -86,3 +86,30 @@ function subject(x) {
     }
 }
 console.log(subject({ subject: ['english', 'art'] }));
+//  ---------- 12월 2일 : 타입도 변수에 담아서 사용하기 -------------- 
+// 타입을 변수에 넣기 전
+var 동물1;
+var 동물2;
+// 타입 변수에 넣기 전
+var 동물3 = { name: 'kim', age: 20 };
+var 동물4 = { name: 'kim', age: 20 };
+// object안의 이름 const
+var 출생지역1 = 'seoul';
+// 출생지역1 = 'busan' -> 이건 에러남 상수는 이름을 바꿀수 없음
+var 출생지역2 = { region: 'seoul' };
+출생지역2.region = '부산'; // const 오브젝트 하면 안에 있는 내용을 수정할 수 있음.
+var 여자친구 = {
+    name: '엠버'
+};
+var position = { x: 10, y: 20 };
+var test3 = {
+    size: 66,
+    position: [1, 2, 3]
+};
+var 회원정보 = {
+    name: '홍길동',
+    adult: true,
+    phone: '123',
+    email: 'qwe@ewq.com'
+};
+console.log(회원정보);
