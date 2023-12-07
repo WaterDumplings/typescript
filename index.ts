@@ -189,59 +189,79 @@ let 회원정보: NewUser = {
 
 console.log(회원정보);
 
-// object안의 이름 const
-const 출생지역1 = 'seoul';
-// 출생지역1 = 'busan' -> 이건 에러남 상수는 이름을 바꿀수 없음
+// // object안의 이름 const
+// const 출생지역1 = 'seoul';
+// // 출생지역1 = 'busan' -> 이건 에러남 상수는 이름을 바꿀수 없음
 
-const 출생지역2 = { region: 'seoul' }
-출생지역2.region = '부산' // const 오브젝트 하면 안에 있는 내용을 수정할 수 있음.
+// const 출생지역2 = { region: 'seoul' }
+// 출생지역2.region = '부산' // const 오브젝트 하면 안에 있는 내용을 수정할 수 있음.
 
-type Girlfriend = {
-  // readonly -> 읽기 전용으로 바꿔서 object여도 수정 불가능으로 할 수 있따.
-  readonly name: string
+// type Girlfriend = {
+//   // readonly -> 읽기 전용으로 바꿔서 object여도 수정 불가능으로 할 수 있따.
+//   readonly name: string
+// }
+
+// const 여자친구: Girlfriend = {
+//   name: '엠버'
+// }
+
+// // 타입 합치기
+// type Name2 = string;
+// type Age = number;
+// type Person = Name2 | Age;
+
+// type PositionX = { x: number };
+// type PositionY = { y: number };
+
+// type NewType = PositionX & PositionY;
+
+// let position: NewType = { x: 10, y: 20 };
+
+// type a1 = {
+//   color?: string,
+//   size: number
+//   readonly position: number[]
+// };
+
+// let test3: a1 = {
+//   size: 66,
+//   position: [1, 2, 3]
+// }
+
+// type User1 = {
+//   name: string,
+//   phone: string,
+//   email: string,
+// };
+// type Adult = { adult: boolean };
+
+// type NewUser = User1 & Adult;
+
+// let 회원정보: NewUser = {
+//   name: '홍길동',
+//   adult: true,
+//   phone: '123',
+//   email: 'qwe@ewq.com'
+// };
+
+// console.log(회원정보);
+
+
+// 특정 글자나 숫자만 가질 수 있게 제한을 두는 탕비 literal type
+let john1 : '대머리';
+let kim1 : '솔로';
+
+// or 기호도 사용 가능
+let 방향 : 'left' | 'right';
+방향 = 'left';  
+console.log(방향);
+
+// 함수도 같다.
+function 함수1 (a : 'hello') : 1 | 0 | -1 {
+  return 1
 }
 
-const 여자친구: Girlfriend = {
-  name: '엠버'
+// 
+function rock(a : '가위' | '바위' | '보') :('가위' | '바위' | '보')[] {
+  return ['가위', '보']
 }
-
-// 타입 합치기
-type Name2 = string;
-type Age = number;
-type Person = Name2 | Age;
-
-type PositionX = { x: number };
-type PositionY = { y: number };
-
-type NewType = PositionX & PositionY;
-
-let position: NewType = { x: 10, y: 20 };
-
-type a1 = {
-  color?: string,
-  size: number
-  readonly position: number[]
-};
-
-let test3: a1 = {
-  size: 66,
-  position: [1, 2, 3]
-}
-
-type User1 = {
-  name: string,
-  phone: string,
-  email: string,
-};
-type Adult = { adult: boolean };
-
-type NewUser = User1 & Adult;
-
-let 회원정보: NewUser = {
-  name: '홍길동',
-  adult: true,
-  phone: '123',
-  email: 'qwe@ewq.com'
-};
-
-console.log(회원정보);
